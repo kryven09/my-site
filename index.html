@@ -3,26 +3,56 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kryven</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+    <title>Kryven // Home</title>
 
-<body>
-
-    <div class="container">
-        <h1>📱 Kryven</h1>
-        <p>My personal website</p>
-
-        <button onclick="hello()">
-            Test button
-        </button>
-    </div>
-
-    <script>
-        function hello() {
-            alert("It works!");
+    <style>
+        * {
+            box-sizing: border-box;
         }
-    </script>
 
-</body>
-</html>
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: #0b0d10;
+            color: #e8eaed;
+            font-family: Arial, sans-serif;
+        }
+
+        .container {
+            width: min(900px, 92%);
+            margin: 0 auto;
+            padding: 70px 0;
+        }
+
+        .top {
+            margin-bottom: 45px;
+        }
+
+        .status {
+            color: #65e572;
+            font-family: monospace;
+            font-size: 14px;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            margin: 0;
+            font-size: clamp(42px, 8vw, 76px);
+            letter-spacing: -3px;
+        }
+
+        .subtitle {
+            color: #777d86;
+            font-size: 18px;
+            margin-top: 12px;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 16px;
+        }
+
+        .card {
+            background: #12151a;
+            border: 1px solid #242
