@@ -1,58 +1,143 @@
+cat > index.html <<'EOF'
 <!DOCTYPE html>
 <html lang="ru">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kryven // Home</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Kryven // Home</title>
 
-    <style>
-        * {
-            box-sizing: border-box;
-        }
+<style>
+* {
+    box-sizing: border-box;
+}
 
-        body {
-            margin: 0;
-            min-height: 100vh;
-            background: #0b0d10;
-            color: #e8eaed;
-            font-family: Arial, sans-serif;
-        }
+body {
+    margin: 0;
+    min-height: 100vh;
+    background: #0b0d10;
+    color: #e8eaed;
+    font-family: Arial, sans-serif;
+}
 
-        .container {
-            width: min(900px, 92%);
-            margin: 0 auto;
-            padding: 70px 0;
-        }
+.container {
+    width: 90%;
+    max-width: 900px;
+    margin: auto;
+    padding: 70px 0;
+}
 
-        .top {
-            margin-bottom: 45px;
-        }
+.status {
+    color: #65e572;
+    font-family: monospace;
+    margin-bottom: 15px;
+}
 
-        .status {
-            color: #65e572;
-            font-family: monospace;
-            font-size: 14px;
-            margin-bottom: 12px;
-        }
+h1 {
+    font-size: 70px;
+    margin: 0;
+}
 
-        h1 {
-            margin: 0;
-            font-size: clamp(42px, 8vw, 76px);
-            letter-spacing: -3px;
-        }
+.subtitle {
+    color: #777d86;
+    font-size: 18px;
+    margin: 10px 0 45px;
+}
 
-        .subtitle {
-            color: #777d86;
-            font-size: 18px;
-            margin-top: 12px;
-        }
+.grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px;
+}
 
-        .grid {
-            display: grid;
-            grid-template-columns: repeat(2, 1fr);
-            gap: 16px;
-        }
+.card {
+    background: #12151a;
+    border: 1px solid #242932;
+    border-radius: 18px;
+    padding: 25px;
+}
 
-        .card {
-            background: #12151a;
-            border: 1px solid #242
+.card h2 {
+    margin: 10px 0;
+}
+
+.card p {
+    color: #858b94;
+}
+
+.terminal {
+    margin-top: 16px;
+    padding: 20px;
+    border-radius: 18px;
+    background: #090b0d;
+    border: 1px solid #242932;
+    color: #65e572;
+    font-family: monospace;
+}
+
+footer {
+    margin-top: 50px;
+    text-align: center;
+    color: #555b64;
+}
+
+@media (max-width: 600px) {
+    .grid {
+        grid-template-columns: 1fr;
+    }
+
+    h1 {
+        font-size: 50px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="status">● SYSTEM ONLINE</div>
+
+<h1>Kryven</h1>
+
+<div class="subtitle">
+Personal space on the internet.
+</div>
+
+<div class="grid">
+
+<div class="card">
+<h2>💻 Projects</h2>
+<p>My websites, experiments and things I'm building.</p>
+</div>
+
+<div class="card">
+<h2>🎮 Gaming</h2>
+<p>Games, discoveries and stuff worth keeping.</p>
+</div>
+
+<div class="card">
+<h2>🎵 Music</h2>
+<p>Artists, albums and tracks currently on repeat.</p>
+</div>
+
+<div class="card">
+<h2>📁 Files</h2>
+<p>Personal file management will live here.</p>
+</div>
+
+</div>
+
+<div class="terminal">
+kryven@web:~$ whoami<br>
+kryven
+</div>
+
+<footer>
+Built with HTML & CSS · 2026
+</footer>
+
+</div>
+
+</body>
+</html>
